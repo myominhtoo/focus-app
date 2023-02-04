@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {  TouchableWithoutFeedback , View , Keyboard } from 'react-native';
+import style from './src/styles/index';
+import Focus  from './src/features/focus/Focus';
+import { useReducer } from 'react';
+import focusReduer from './src/reducers/focusReducer';
+import { initialFocusState } from './src/datas';
 
 export default function App() {
+
+  const [ focuState , focusDispath ] = useReducer( focusReduer , initialFocusState );
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={style.appContainer}>
+        <Focus />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+//keep awake => expo-keep-awake

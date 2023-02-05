@@ -5,7 +5,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 export default function Countdown({
     time = 5,
     isPaused = false ,
-    onEnd 
+    onEnd ,
+    onProgress
 }){
 
     const [ ms , setMs ] = useState(() =>{
@@ -40,7 +41,7 @@ export default function Countdown({
                     onEnd();
                     return 0;
                 }
-                return prevMs - 1000;
+                return  prevMs - 1000;
             })
         } , 1000 );
     }
@@ -56,6 +57,10 @@ export default function Countdown({
         }
     } , [ isPaused ] );
 
+
+    useEffect(() => {
+        onProgress(ms);
+    } , [ms]);
 
     return (
         <View style={style.countdownContainer} >

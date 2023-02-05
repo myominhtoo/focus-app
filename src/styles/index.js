@@ -11,7 +11,8 @@ const style = StyleSheet.create({
     title : {
         fontWeight : 'bold',
         fontSize : sizes.lg,
-        color : colors.SNOW
+        color : colors.SNOW,
+        marginBottom : 10
     },
     input : {
         paddingHorizontal : 10,
@@ -140,7 +141,7 @@ const style = StyleSheet.create({
     },
     timerControlContainer : {
         width : '100%',
-        marginTop : 80,
+        marginTop : 20,
         padding : 20,
         display :'flex',
         justifyContent :'center',
@@ -158,6 +159,62 @@ const style = StyleSheet.create({
     },
     btnTxt : {
         fontSize : sizes.sm,
+        color : colors.PALE_SNOW
+    },
+    focusInfoContainer : {
+        display : 'flex',
+        flexDirection :'column',
+        alignItems : 'center',
+        justifyContent :'center',
+    },
+    progressContainer :{
+        width : '100%',
+        marginVertical : 20,
+        marginHorizontal : 5,
+        alignSelf : 'center',
+        backgroundColor : colors.PALE_SNOW,
+    },
+    progress : {
+        width : '100%',
+        backgroundColor :'blue',
+        padding : 1,
+    },
+    itemsContainer : {
+        flex : 1,
+        marginTop : 30,
+        display : 'flex',
+        justifyContent : 'center',
+        flexDirection : 'column',
+        alignItems : 'center'
+    },
+    focusItem : {
+        color : colors.PALE_SNOW,
+        fontSize : sizes.sm
+    },
+    itemWrapper : {
+        borderWidth : 1,
+        borderRadius : 3,
+        borderColor : colors.PALE_SNOW,
+        paddingVertical : 5,
+        paddingHorizontal:15,
+        minWidth : '98%',
+        marginBottom : 15
+    },
+    cancelBtn : {
+        marginTop : 30,
+    },
+    cancelTxt : {
+        color : 'red',
+        fontSize : sizes.sm
+    },
+    itemsHeader : {
+        marginBottom : 15,
+        paddingHorizontal : 5,
+        width : '100%'
+    },
+    itemsTitle : {
+        textAlign : 'left',
+        fontSize : sizes.md,
         color : colors.PALE_SNOW
     }
 });

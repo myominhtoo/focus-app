@@ -2,7 +2,7 @@ import { focusActions } from "../datas";
 
 export default function focusReduer( 
     state ,
-    action = { type : '' , payload : {} }
+    action = { type : '' , payload : null }
 ){
     switch( action.type ){
         case focusActions.SET_FOCUS : 
@@ -17,6 +17,16 @@ export default function focusReduer(
             ...state,
             focusHistory : [ ...action.payload ]
           };
+        case focusActions.UPDATE_HISTORY : 
+          return {
+            focusHistory : state.focusHistory.map( focus => {
+              if( focus.id === action.payload.id ){
+                return action.payload;
+              }
+              return focus;
+            }),
+            focus : null
+          }
         default : 
           return state;
     }

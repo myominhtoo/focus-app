@@ -3,9 +3,12 @@ import Button from "../../components/Button"
 import style from "../../styles"
 import { View , Text  , TextInput } from "react-native"
 import TimeModal from "../../components/TimeModal";
+import FocusItems from "../../components/FocusItems";
 
 export default function Focus({
-    onCreateFocus 
+    onCreateFocus ,
+    items = [],
+    onPressItem 
 }){
 
     const inputRef = useRef();
@@ -59,6 +62,11 @@ export default function Focus({
             <View style={style.errorContainer}>
                 <Text style={style.error}>{error}</Text>
             </View>
+
+            <FocusItems 
+                items={items}
+                onPress={onPressItem}
+            />
 
             <TimeModal 
                 visible={visible}

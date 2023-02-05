@@ -21,6 +21,7 @@ export const focusActions = {
     ADD_FOCUS : 'add-focus',
     REMOVE_FOCUS : 'remove-focus',
     SET_HISTORY : 'set-history',
+    UPDATE_HISTORY : 'update-history',
 }
 
 export const initialFocusState = {
@@ -33,6 +34,12 @@ export const focusStatus = {
     CANCELLED : 2,
     COMPLETED : 3
 };
+
+export const focusColors = {
+    1 : colors.PALE_SNOW,
+    2 : 'red',
+    3 : colors.PALE_SNOW,
+}
 
 export const keys = {
     focusHistory : 'focusHistory'

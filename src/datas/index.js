@@ -20,6 +20,7 @@ export const focusActions = {
     SET_FOCUS : 'set-focus',
     ADD_FOCUS : 'add-focus',
     REMOVE_FOCUS : 'remove-focus',
+    SET_HISTORY : 'set-history',
 }
 
 export const initialFocusState = {
@@ -31,4 +32,8 @@ export const focusStatus = {
     STARTED : 1,
     CANCELLED : 2,
     COMPLETED : 3
+};
+
+export const keys = {
+    focusHistory : 'focusHistory'
 }

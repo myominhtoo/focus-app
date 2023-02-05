@@ -103,6 +103,63 @@ const style = StyleSheet.create({
         flexDirection : 'row',
         justifyContent :'flex-end',
     },
+    countdownContainer : {
+        width:'100%',
+        justifyContent :'center',
+        flexDirection : 'row',
+        marginVertical : 50
+    },
+    countdownBody : {
+        width : '80%',
+        height : '100%',
+        padding : 20,
+        backgroundColor : colors.PALE_SNOW,
+        display :'flex',
+        flexDirection : 'row',
+        justifyContent : 'center',
+        alignItems : 'center',
+        gap : 10,
+    },
+    timerHeader : {
+        width : '100%'
+    },
+    time : {
+        fontSize : sizes.xxl,
+        color : colors.PALE_DARK,
+        marginHorizontal : 5
+    },
+    colon : {
+        color : 'blue',
+        fontSize : sizes.xl
+    },
+    timerBody : {
+        flex : 1,
+    },
+    timerContainer : {
+        flex : 1,
+    },
+    timerControlContainer : {
+        width : '100%',
+        marginTop : 80,
+        padding : 20,
+        display :'flex',
+        justifyContent :'center',
+        alignItems : 'center',
+    },
+    controlBtn : {
+        width : 80,
+        height : 80,
+        borderRadius : 80,
+        borderWidth : 1.4,
+        borderColor : colors.PALE_SNOW,
+        display : 'flex',
+        justifyContent : 'center',
+        alignItems : 'center'
+    },
+    btnTxt : {
+        fontSize : sizes.sm,
+        color : colors.PALE_SNOW
+    }
 });
 
 export default style;

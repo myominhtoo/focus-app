@@ -12,6 +12,11 @@ export default function focusReduer(
             ...state,
             focusHistory : [...state.focusHistory , action.payload ] ,
         };
+        case focusActions.SET_HISTORY : 
+          return {
+            ...state,
+            focusHistory : [ ...action.payload ]
+          };
         default : 
           return state;
     }

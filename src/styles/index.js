@@ -27,6 +27,9 @@ const style = StyleSheet.create({
     focusContainer : {
         flex : 1,
     },
+    container : {
+        flex : 1,
+    },
     focusTitle : {
         color : colors.PALE_SNOW,
         fontSize : sizes.xl
@@ -49,7 +52,57 @@ const style = StyleSheet.create({
     btnText : {
         fontSize : sizes.lg,
         color : colors.SNOW,
-    }
+    },
+    errorContainer : {
+       padding : 0
+    },
+    error : {
+        fontSize : sizes.sm,
+        fontWeight : 'bold',
+        color : colors.ERROR
+    },
+    modalContainer : {
+        flex : 1,
+        alignItems : 'flex-start',
+        flexDirection : 'row',
+        justifyContent : 'center',
+        paddingTop : 50
+    },
+    modalContent : {
+        width :'90%',
+        height : '50%',
+        borderRadius : 5,
+        backgroundColor : colors.SNOW,
+        padding : 20
+    },
+    modalHeader : {
+        display : 'flex',
+        flexDirection : 'row',
+        justifyContent :'space-between'
+    },
+    modalBody : {
+        marginVertical : 30,
+        flex : 1,
+    },
+    timeInput : {
+        borderWidth :1,
+        borderColor : 'blue',
+        paddingVertical : 8,
+        paddingHorizontal : 5,
+        color : colors.PALE_DARK,
+        width: '85%'
+    },
+    label : {
+        fontWeight : 'bold',
+        color : colors.PALE_DARK
+    },
+    btnContainer : {
+        width : '100%',
+        marginTop : 15,
+        display : 'flex',
+        flexDirection : 'row',
+        justifyContent :'flex-end',
+    },
 });
 
 export default style;

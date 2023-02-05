@@ -3,7 +3,8 @@ export const colors = {
     PALE_DARK : 'rgba(0,0,0,0.75)',
     PALE_SNOW : 'rgba(255,255,255,0.75)',
     SNOW : 'rgba(255,255,255,1)',
-    DARK : 'rgba(0,0,0,0.85)'
+    DARK : 'rgba(0,0,0,0.85)',
+    ERROR : 'red',
 };
 
 export const sizes = {
@@ -24,4 +25,10 @@ export const focusActions = {
 export const initialFocusState = {
     focus : null,
     focusHistory : []
+}
+
+export const focusStatus = {
+    STARTED : 1,
+    CANCELLED : 2,
+    COMPLETED : 3
 }
